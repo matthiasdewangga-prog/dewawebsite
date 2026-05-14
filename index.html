@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Gys, Ini Gue - Dewangga! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header dengan Minion -->
+    <header class="header">
+        <div class="minion-container">
+            <svg class="minion" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Minion Body -->
+                <ellipse cx="100" cy="180" rx="60" ry="70" fill="#FFD700"/>
+                <!-- Minion Head -->
+                <circle cx="100" cy="80" r="55" fill="#FFD700"/>
+                <!-- Left Eye -->
+                <circle cx="75" cy="70" r="20" fill="#333"/>
+                <circle cx="78" cy="68" r="8" fill="white"/>
+                <!-- Right Eye -->
+                <circle cx="125" cy="70" r="20" fill="#333"/>
+                <circle cx="128" cy="68" r="8" fill="white"/>
+                <!-- Mouth -->
+                <path d="M 85 100 Q 100 110 115 100" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <!-- Goggles -->
+                <rect x="55" y="45" width="35" height="30" rx="5" fill="none" stroke="#333" stroke-width="2"/>
+                <rect x="110" y="45" width="35" height="30" rx="5" fill="none" stroke="#333" stroke-width="2"/>
+                <line x1="92" y1="45" x2="92" y2="75" stroke="#333" stroke-width="2"/>
+                <!-- Left arm -->
+                <rect x="30" y="150" width="25" height="15" rx="7" fill="#FFD700" stroke="#333" stroke-width="2"/>
+                <!-- Right arm -->
+                <rect x="145" y="150" width="25" height="15" rx="7" fill="#FFD700" stroke="#333" stroke-width="2"/>
+                <!-- Pants -->
+                <rect x="70" y="240" width="60" height="50" fill="#333" rx="5"/>
+            </svg>
+        </div>
+        <h1 class="title">HEY GYS, INI GUE! 👋</h1>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Personal Message -->
+        <section class="message-section">
+            <div class="message-box">
+                <p class="message-text">
+                    "Hei gys, ini gue! 🎊<br><br>
+                    Thanks udah mau kenal sama gue. Makasih udah mau dan selalu jadi teman gue, meskipun gue kadang nyebelin, kadang buat lu-lu pada kesel.<br><br>
+                    Maafin gue ya! 🙏❤️"
+                </p>
+            </div>
+        </section>
+
+        <!-- Favorite Info -->
+        <section class="info-section">
+            <h2>Tentang Gue 💁‍♂️</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">☕</div>
+                    <h3>Minuman Favorit</h3>
+                    <p>KOPI! Gue gila banget sama kopi, apalagi yang panas 😋</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🖤</div>
+                    <h3>Warna Favorit</h3>
+                    <p>HITAM! Cool, sophisticated, dan timeless banget 😎</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🐻</div>
+                    <h3>Kartun Favorit</h3>
+                    <p>BERNARD BEAR! Keren, cool, dan independent gitu 🎬</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">😄</div>
+                    <h3>Personality Gue</h3>
+                    <p>Santai tapi kadang gila, bisa ngelawak atau serius, teman sejati! 🤪</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Section -->
+        <section class="gift-section">
+            <h2>🎁 Buka Hadiah Buat Gue!</h2>
+            <div class="gifts-container">
+                <div class="gift-box" onclick="openGift(0)">
+                    <div class="gift-top"></div>
+                    <div class="gift-body">🎁</div>
+                </div>
+                <div class="gift-box" onclick="openGift(1)">
+                    <div class="gift-top"></div>
+                    <div class="gift-body">🎁</div>
+                </div>
+                <div class="gift-box" onclick="openGift(2)">
+                    <div class="gift-top"></div>
+                    <div class="gift-body">🎁</div>
+                </div>
+                <div class="gift-box" onclick="openGift(3)">
+                    <div class="gift-top"></div>
+                    <div class="gift-body">🎁</div>
+                </div>
+            </div>
+            <div class="gift-message-display" id="giftMessage"></div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2>❓ Seberapa Kenal Kamu ke Dewangga?</h2>
+            <div class="quiz-container">
+                <!-- Question 1 -->
+                <div class="quiz-question">
+                    <p class="question-text">1. Apa minuman favorit Dewangga?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q1', 'teh', this)">☕ Teh</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q1', 'kopi', this)">☕ Kopi</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q1', 'juice', this)">🧃 Juice</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q1', 'boba', this)">🧋 Boba</button>
+                    </div>
+                    <div class="quiz-result" id="q1-result"></div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question">
+                    <p class="question-text">2. Warna favorit Dewangga apa?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q2', 'pink', this)">🌸 Pink</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q2', 'biru', this)">💙 Biru</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q2', 'hitam', this)">🖤 Hitam</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q2', 'merah', this)">❤️ Merah</button>
+                    </div>
+                    <div class="quiz-result" id="q2-result"></div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question">
+                    <p class="question-text">3. Kartun favorit Dewangga siapa?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q3', 'minion', this)">🟨 Minion</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q3', 'bernard', this)">🐻 Bernard Bear</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q3', 'doraemon', this)">🤖 Doraemon</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q3', 'shinchan', this)">👦 Shin Chan</button>
+                    </div>
+                    <div class="quiz-result" id="q3-result"></div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-question">
+                    <p class="question-text">4. Gimana kepribadian Dewangga?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="checkAnswer('q4', 'serius', this)">😐 Serius</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q4', 'santai', this)">😎 Santai tapi kadang gila</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q4', 'berisik', this)">📢 Berisik</button>
+                        <button class="quiz-btn" onclick="checkAnswer('q4', 'pemalu', this)">😳 Pemalu</button>
+                    </div>
+                    <div class="quiz-result" id="q4-result"></div>
+                </div>
+            </div>
+
+            <!-- Score Board -->
+            <div class="score-board" id="scoreBoard"></div>
+        </section>
+    </main>
+
+    <!-- Floating Bernard Bear -->
+    <div class="floating-bernard" title="Klik gue!">
+        <svg viewBox="0 0 150 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- Head -->
+            <circle cx="75" cy="50" r="35" fill="#8B6F47"/>
+            <!-- Ears -->
+            <circle cx="50" cy="20" r="12" fill="#8B6F47"/>
+            <circle cx="100" cy="20" r="12" fill="#8B6F47"/>
+            <circle cx="50" cy="20" r="7" fill="#A0826D"/>
+            <circle cx="100" cy="20" r="7" fill="#A0826D"/>
+            <!-- Eyes -->
+            <circle cx="60" cy="45" r="6" fill="#333"/>
+            <circle cx="90" cy="45" r="6" fill="#333"/>
+            <circle cx="62" cy="43" r="2" fill="white"/>
+            <circle cx="92" cy="43" r="2" fill="white"/>
+            <!-- Nose -->
+            <ellipse cx="75" cy="55" rx="4" ry="5" fill="#333"/>
+            <!-- Mouth -->
+            <path d="M 75 55 Q 75 65 70 68" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M 75 55 Q 75 65 80 68" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Body -->
+            <ellipse cx="75" cy="110" rx="35" ry="50" fill="#8B6F47"/>
+            <!-- Arms -->
+            <ellipse cx="45" cy="100" rx="12" ry="30" fill="#8B6F47" transform="rotate(-30 45 100)"/>
+            <ellipse cx="105" cy="100" rx="12" ry="30" fill="#8B6F47" transform="rotate(30 105 100)"/>
+            <!-- Legs -->
+            <rect x="60" y="150" width="10" height="25" rx="5" fill="#8B6F47"/>
+            <rect x="80" y="150" width="10" height="25" rx="5" fill="#8B6F47"/>
+        </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Made with ❤️ untuk semua teman-teman gue</p>
+        <p>Stay cool and santai! 😎☕</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
